@@ -1,1 +1,1 @@
-java -jar -Dserver.port=0 consumer\build\libs\consumer-0.0.1-SNAPSHOT.jar
+java -jar -Dserver.port=0 employee-consumer\build\libs\employee-consumer-0.0.1-SNAPSHOT.jar
