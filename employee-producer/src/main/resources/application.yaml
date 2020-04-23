@@ -1,0 +1,19 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: employee-details
+          producer:
+            partition-count: 2
+          binder: kafka
+      kafka:
+        binder:
+          autoAddPartitions: true
+          brokers: localhost
+          zkNodes: localhost
+server:
+  port: 9000

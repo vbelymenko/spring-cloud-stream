@@ -1,0 +1,20 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: employee-details
+          binder: kafka
+          group: employee-group
+          # one consumer per partition
+          consumer:
+            concurrency: 2
+      kafka:
+        binder:
+          brokers: localhost
+          zkNodes: localhost
+server:
+  port: 0
